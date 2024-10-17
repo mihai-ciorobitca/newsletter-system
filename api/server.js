@@ -2,6 +2,7 @@ const express = require('express');
 const supabase = require('@supabase/supabase-js');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const path = require('path');
 
 const SUPABASE_URL = process.env.SUPABASE_URL
 const SUPABASE_KEY = process.env.SUPABASE_KEY
