@@ -11,9 +11,8 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 const app = express();
 
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views')) 
 app.use(bodyParser.urlencoded({ extended: true }));
-
-app.use(express.static('views'));
 
 app.get('/', (req, res) => {
     return res.render('subscribePage', { message: null });
