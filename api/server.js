@@ -13,6 +13,8 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(express.static('views'));
+
 app.get('/', (req, res) => {
     return res.render('subscribePage', { message: null });
 });
